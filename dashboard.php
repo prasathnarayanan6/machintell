@@ -304,7 +304,7 @@ setInterval(getchartdata, 10000);
                 const textViewCount1 = document.getElementById('s1');
                 const textViewCount2 = document.getElementById('s2');
                 const textViewCount3 = document.getElementById('s3');
-                const textViewCount4 = document.getElementById('s4');
+                // const textViewCount4 = document.getElementById('s4');
                 setInterval(function() {
                   fetch(url).then(function(response){
                       return response.json();
@@ -312,7 +312,7 @@ setInterval(getchartdata, 10000);
                       textViewCount1.textContent = data.s1;
                       textViewCount2.textContent = data.s2;
                       textViewCount3.textContent = data.s3;
-                      textViewCount4.textContent = data.s4;
+                      // textViewCount4.textContent = data.s4;
                     })
                 }, 1000);
             }

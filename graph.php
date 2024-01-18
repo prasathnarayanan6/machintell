@@ -24,13 +24,10 @@ if(!isset($_SESSION['identity']) && !isset($_SESSION['email'])){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <style>
-      .zoom {
-  /* padding: 50px; */
-  transition: transform .2s; /* Animation */
-  /* width: 200px;
-  height: 200px; */
-  /* margin: 0 auto; */
-}
+      .zoom 
+      {
+        transition: transform .2s; /* Animation */
+      }
 
 .zoom:hover {
   transform: scale(1.1);
