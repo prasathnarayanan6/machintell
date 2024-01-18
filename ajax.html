@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="chart" id="chart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="chart" id="chart1"></div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script>
+            $(document).ready(function(){  
+                var output_data = 0;
+                $.ajax({  
+                    url: 'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m',  
+                    type: 'GET',  
+                    success: function(data) {  
+                        output_data = data.elevation;       
+                        var options = {
+                            series: [output_data],
+                            chart: {
+                                height: 200,
+                                type: 'radialBar',
+                                toolbar: {
+                                    show: true
+                                }
+                            },
+                            plotOptions: {
+                                radialBar: {
+                                    startAngle: -135,
+                                    endAngle: 225,
+                                    hollow: {
+                                        margin: 0,
+                                        size: '70%',
+                                        background: '#fff',
+                                        image: undefined,
+                                        imageOffsetX: 0,
+                                        imageOffsetY: 0,
+                                        position: 'front',
+                                        dropShadow: {
+                                            enabled: true,
+                                            top: 3,
+                                            left: 0,
+                                            blur: 4,
+                                            opacity: 0.24
+                                        }
+                                    },
+                                    track: {
+                                        background: '#fff',
+                                        strokeWidth: '67%',
+                                        margin: 0, // margin is in pixels
+                                        dropShadow: {
+                                            enabled: true,
+                                            top: -3,
+                                            left: 0,
+                                            blur: 4,
+                                            opacity: 0.35
+                                        }
+                                    },
+                                    dataLabels: {
+                                        show: true,
+                                        name: {
+                                            offsetY: -10,
+                                            show: true,
+                                            color: '#888',
+                                            fontSize: '17px'
+                                        },
+                                        value: {
+                                            formatter: function(val) {
+                                                return parseInt(val);
+                                            },
+                                            color: '#111',
+                                            fontSize: '36px',
+                                            show: true,
+                                        }
+                                    }
+                                }
+                            },
+                            fill: {
+                                type: 'gradient',
+                                gradient: {
+                                    shade: 'dark',
+                                    type: 'horizontal',
+                                    shadeIntensity: 0.5,
+                                    gradientToColors: ['#ABE5A1'],
+                                    inverseColors: true,
+                                    opacityFrom: 1,
+                                    opacityTo: 1,
+                                    stops: [0, 100]
+                                }
+                            },
+                            stroke: {
+                                lineCap: 'round'
+                            },
+                            labels: ['Sensor'],
+                        };
+                        var chart = new ApexCharts(document.querySelector("#chart"), options);
+                        chart.render();
+                        var chart1 = new ApexCharts(document.querySelector("#chart1"), options);
+                        chart1.render();
+                        var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
+                        chart2.render();
+                    }  
+                });  
+               
+            }); 
+        </script>
+    </body>
+</html>
