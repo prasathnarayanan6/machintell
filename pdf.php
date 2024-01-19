@@ -159,6 +159,8 @@ $html .="
 <th><strong>S1</strong></th>
 <th><strong>S2</strong></th>
 <th><strong>S3</strong></th>
+<th><strong>deflection</strong></th>
+<th><strong>ML Model</strong></th>
 <th><strong>Date</strong></th>
 </tr>";
 
@@ -173,21 +175,18 @@ if ($result->num_rows > 0) {
         $s1 = $row['s1'];
         $s2 = $row["s2"];
         $s3 = $row["s3"];
+        $deflection = $row['deflection'];
+        $model = $row['model'];
         $s4 = $row["date"];
-        // $s4 = $row["s4"];
-        // $s5 = $row["s5"];
-        // $s6 = $row["s6"];
-        // $s7 = $row["s7"];
-        // $s8 = $row["s8"];
-        // $s9 = $row["s9"];
-        // $s10 = $row["s10"];
 
         $html .="
         <tr>
-        <td>xy1waveguide</td>
+        <td>".$id."</td>
         <td>". $s1 ."</td>
         <td>". $s2 ."</td>
         <td>". $s3 ."</td>
+        <td>". $deflection ."</td>
+        <td>". $model ."</td>
         <td>".$s4."</td>
         </tr>";
     }

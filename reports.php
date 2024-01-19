@@ -158,15 +158,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                     </div>
             </nav>
             <div class="row">
-                <div class="col-md-12">
-                    <form class="ml-auto">
-                        <input type="text" class="" placholder="Enter the ML Model" />  
-                        <button type="submit" class="btn btn-dark btn-sm">Test</button>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                        <div class="col-xl-6 col-sm-12 col-12 mt-3"><!----first half col 1-->                               
+                        <div class="col-xl-8 col-sm-12 col-12 mt-3"><!----first half col 1-->                               
                                 <div class="card" style=""><!-- wave guide 1 card-->
                                 <div class="card-content"><!-- wg1 card content--->
                                     <div class="card-body"><!--- wg1 card body--->
@@ -278,7 +270,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                 </div>
                                 </div>
                         </div><!--col close-->
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-4 mt-5">
                                 <div class="col-xl-12 col-sm-12 col-12 mt-5"><!----first half col 1-->                               
                                         <div class="card" style=""><!-- wave guide 1 card-->
                                         <div class="card-content"><!-- wg1 card content--->
@@ -292,7 +284,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                         </div>
                                                     </div>
                                                     <div class="row mt-3">
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-7">
                                                             <div class="card" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
@@ -302,22 +294,12 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
+                                                        <div class="col-md-5">
                                                             <div class="card" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
                                                                         <center><a href="pdf" class="text-dark" style=""><i class="fas fa-file" style="font-size:40px" data-lity data-lity-target="reportspopover"></i></a><br><br></center>
                                                                         <center><h6>Reports</h6></center>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-4">
-                                                            <div class="card" style=""><!-- wave guide 1 card-->
-                                                                <div class="card-content"><!-- wg1 card content--->
-                                                                    <div class="card-body">
-                                                                        <center><a href="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5" class="text-dark" data-lity data-lity-target="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5"><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i></a><br><br></center>
-                                                                        <center><h6>Deflect Graph</h6></center>
                                                                     </div>
                                                                 </div>
                                                             </div>

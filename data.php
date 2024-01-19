@@ -9,6 +9,7 @@ $data = [
     's1' => $row['s1'],
     's2' => $row['s2'],
     's3' => $row['s3'],
+    'deflection' => $row['deflection'],
     'date' => $row['date']
     // 'state' => $row['state']
 ];

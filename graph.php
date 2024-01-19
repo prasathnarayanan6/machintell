@@ -188,7 +188,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                             <div class="card" style=""><!-- wave guide 1 card-->
                                                                 <div class="card-content"><!-- wg1 card content--->
                                                                     <div class="card-body">
-                                                                        <center><a href="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5" class="text-dark" data-lity data-lity-target="summa.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5"><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i></a><br><br></center>
+                                                                        <center><a href="graphs.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3" class="text-dark" data-lity data-lity-target="graphs.php?id=xy1waveguide&&s1=s1&&s2=s2&&s3=s3&&s4=s4&&s5=s5"><i class="fas fa-chart-line fa-fw" style="font-size:40px"></i></a><br><br></center>
                                                                         <center><h6>Deflect Graph</h6></center>
                                                                     </div>
                                                                 </div>
@@ -269,7 +269,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                                     <span class="" style="color:white;"><a href="#" class="text-white"><i class="fas fa-file" style="font-size:25px"></i></a></span>
                                             </div>
                                             <div class="col-md-4">
-                                                <span class="" style="color:white;"><a href="summa.php" class="text-white" data-lity data-lity-target="summa.php"><i class="fas fa-chart-line fa-fw" style="font-size:25px"></i></a></span>
+                                                <span class="" style="color:white;"><a href="graphs.php" class="text-white" data-lity data-lity-target="summa.php"><i class="fas fa-chart-line fa-fw" style="font-size:25px"></i></a></span>
                                             </div>
                                         </div>   
                                 </div>

@@ -11,10 +11,6 @@ temp1 = float(sys.argv[1])
 temp2 = float(sys.argv[2])
 temp3 = float(sys.argv[3])
 mymodelname = str(sys.argv[4])
-# temp1 = 22.2
-# temp2 = 23.4
-# temp3 = 33.2
-# mymodelname = 'LinearRegression'
 ip = np.array([temp1,temp2,temp3]).reshape(1,3)
 ans = float(0)
 if mymodelname=='LinearRegression':
