@@ -127,7 +127,7 @@ if(isset($_POST['login'])){
           date_default_timezone_set('Asia/Kolkata');
           $date = date("Y-m-d_h:i:sa");
           $_SESSION['time'] = $date;
-          header("Location: dashboard?identity={$identityid}");
+          header("Location: dashboard.php?identity={$identityid}");
           $sql1 = "INSERT INTO loginact(email, hash, date) VALUES('$email', '$identityid', '$date')";
           $conn->query($sql1);
         }

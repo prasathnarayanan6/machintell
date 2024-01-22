@@ -173,14 +173,14 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
                                             <div class="table-responsive">
                                                 <table class="table table-bordered">
                                                     <thead>
-                                                    <tr>
-                                                        <th scope="col">S.No</th>
-                                                        <th scope="col">Temp 1</th> 
-                                                        <th scope="col">Temp 2</th>
-                                                        <th scope="col">Temp 3</th>
-                                                        <th scope="col">Deflection</th>
-                                                        <th scope="col">Date</th>
-                                                    </tr>
+                                                        <tr>
+                                                            <th scope="col">S.No</th>
+                                                            <th scope="col">Temp 1</th> 
+                                                            <th scope="col">Temp 2</th>
+                                                            <th scope="col">Temp 3</th>
+                                                            <th scope="col">Deflection</th>
+                                                            <th scope="col">Date</th>
+                                                        </tr>
                                                     </thead>
                                                     <tbody>
                                                     <tr>
@@ -318,27 +318,36 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 </main>
         <script src="./lity/lity/dist/lity.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-        function startLiveUpdate(){
-            const textViewCount1 = document.getElementById('s1');
-            const textViewCount2 = document.getElementById('s2');
-            const textViewCount3 = document.getElementById('s3');
-            const textViewCount4 = document.getElementById('date');
-            setInterval(function() {
-               fetch('http://localhost:81/machintell/data.php').then(function(response){
-                  return response.json();
-               }).then(function(data){
-                  textViewCount1.textContent = data.s1;
-                  textViewCount2.textContent = data.s2;
-                  textViewCount3.textContent = data.s3;
-                  textViewCount4.textContent = data.date;
+         <script>
+    function startLiveUpdate() {
+        const textViewCount1 = document.getElementById('s1');
+        const textViewCount2 = document.getElementById('s2');
+        const textViewCount3 = document.getElementById('s3');
+        const textViewCount4 = document.getElementById('date');
+
+        function updateData() {
+            fetch('http://18.206.189.74/machintell/data.php')
+                .then(response => response.json())
+                .then(data => {
+                    textViewCount1.textContent = data.s1;
+                    textViewCount2.textContent = data.s2;
+                    textViewCount3.textContent = data.s3;
+                    textViewCount4.textContent = data.date;
                 })
-            }, 1000);
-         }
-         
-         document.addEventListener('DOMContentLoaded', function (){
-            startLiveUpdate();
-         });
-         </script>
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Initial call to fetch and update data with a delay of 1000 milliseconds (1 second)
+        setTimeout(function() {
+            updateData();
+
+            // Set up periodic updates every 1000 milliseconds (1 second)
+            setInterval(updateData, 1000);
+        },0);
+    }
+
+    document.addEventListener('DOMContentLoaded', startLiveUpdate);
+</script>
+
 </body>
 </html>

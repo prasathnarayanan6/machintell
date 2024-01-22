@@ -250,7 +250,7 @@ overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>      
 const ctx = document.getElementById('myChart');
-const url = "http://localhost:81/machintell/data.php";
+const url = "http://18.206.189.74/machintell/data.php";
 let s1 = [];
 let s2 = [];
 let s3 = [];

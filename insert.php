@@ -9,7 +9,7 @@ $date = date("Y-m-d_H:i:s");
 $mymodelname = "LinearRegression";
 function runMachineLearningModel($s1, $s2, $s3, $mymodelname) {
     $pythonScriptPath = 'trail.py';
-    $pythonExecutablePath = 'C:\\Users\\prasa\\python\\python.exe';
+    $pythonExecutablePath = '/usr/bin/python3';
 
     // Prepare and execute the Python command
     $command = '"' . $pythonExecutablePath . '" ' . $pythonScriptPath . ' ' . $s1 . ' ' . $s2 . ' ' . $s3 .' '. $mymodelname;

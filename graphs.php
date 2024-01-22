@@ -36,7 +36,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
      const ctx = document.getElementById('myChart');
-     const url = "http://localhost:81/machintell/data.php";
+     const url = "http://18.206.189.74/machintell/data.php";
             //start getchartdata
             async function getchartdata(){
                const deflection =[];
